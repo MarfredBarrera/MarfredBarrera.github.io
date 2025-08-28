@@ -1,0 +1,49 @@
+---
+layout: archive
+---
+
+
+<!-- Custom footer CSS -->
+<!-- <link rel="stylesheet" href="/assets/css/custom-footer.css"> -->
+
+{{ content }}
+
+<div class="home-intro">
+  <p>Welcome! I am Marfred Barrera, a PhD student at <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> 
+    studying under <a href="https://negarmehr.com/" target="_blank">Negar Mehr</a> 
+    and the <a href="https://iconlab.negarmehr.com/" target="_blank">ICON lab</a> .
+  </p>
+<!--
+<div class="home-projects">
+  <h3>Projects</h3>
+  <ul>
+    <li><strong>Project One:</strong> Brief description.</li>
+    <li><strong>Project Two:</strong> Brief description.</li>
+  </ul>
+</div>
+
+<div class="home-experience">
+  <h3>Experience</h3>
+  <ul>
+    <li><strong>Company/Role:</strong> Short summary.</li>
+    <li><strong>Another Experience:</strong> Key highlights.</li>
+  </ul>
+</div>
+--
+</div>
+-->
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "History" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %}
