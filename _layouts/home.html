@@ -3,37 +3,88 @@ layout: archive
 ---
 
 
-<!-- Custom footer CSS -->
-<!-- <link rel="stylesheet" href="/assets/css/custom-footer.css"> -->
+<div class="main-wrapper" style="display: flex;">
+  <div class="initial-content">
+    {{ content }}
 
-{{ content }}
+    <div class="home-intro">
+      <p>Welcome! I am Marfred Barrera, a PhD student at <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> 
+        studying under <a href="https://negarmehr.com/" target="_blank">Negar Mehr</a> 
+        and the <a href="https://iconlab.negarmehr.com/" target="_blank">ICON lab</a>. 
+      </p>
 
-<div class="home-intro">
-  <p>Welcome! I am Marfred Barrera, a PhD student at <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> 
-    studying under <a href="https://negarmehr.com/" target="_blank">Negar Mehr</a> 
-    and the <a href="https://iconlab.negarmehr.com/" target="_blank">ICON lab</a> .
-  </p>
-<!--
-<div class="home-projects">
-  <h3>Projects</h3>
-  <ul>
-    <li><strong>Project One:</strong> Brief description.</li>
-    <li><strong>Project Two:</strong> Brief description.</li>
-  </ul>
-</div>
+      <p>Before this, I completed my undergraduate studies at <a href="https://ucsd.edu/" target="_blank">UC San Diego</a>,
+        obtaining a BSc in Mechanical Engineering with a specialization in robotics and control. 
+        My first research experience was as an intern as part of the <a href="https://scripps.ucsd.edu/mpl" target="_blank">Marine Physical Laboratory</a> at the
+        <a href="https://sio.ucsd.edu/" target="_blank">Scripps Institution of Oceanography</a>. There, I worked with Drew Lucas to develop a new
+        generation of self-sufficient autonomous oceanographic instrument platforms.
+        Later, I joined the <a href="https://sylviaherbert.com/" target="_blank">Safe Autonomous Systems Laboratory</a> 
+        where I worked with Sylvia Herbert on safety in the face of uncertainty in state estimation. 
+        I also worked on a joint project with Argonne National Laboratory regarding dual control and estimation for battery systems.
 
-<div class="home-experience">
-  <h3>Experience</h3>
-  <ul>
-    <li><strong>Company/Role:</strong> Short summary.</li>
-    <li><strong>Another Experience:</strong> Key highlights.</li>
-  </ul>
-</div>
---
-</div>
--->
+<section class="cv-section">
+<h2> Education </h2>
+<ul class="cv-list education">
+  <li class="cv-item education">
+    <img src="/assets/images/berkeley-logo.png" alt="UC Berkeley" class="cv-logo">
+    <div class="cv-details education">
+      <strong>PhD, Mechanical Engineering</strong><br>
+      University of California, Berkeley, 2025–Present<br>
+      Advisor: Negar Mehr
+    </div>
+  </li>
+  <li class="cv-item education">
+    <img src="/assets/images/ucsd-logo.png" alt="UCSD" class="cv-logo">
+    <div class="cv-details education">
+      <strong>BSc, Mechanical Engineering</strong><br>
+      UC San Diego, 2021–2025<br>
+      Advisors: Sylvia Herbert, Drew Lucas<br>
+    </div>
+  </li>
+</ul>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "History" }}</h3>
+<h2> Research Experience </h2>
+<ul class="cv-list research">
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Graduate Researcher</strong><br>
+      ICON Laboratory, UC Berkeley, 2025–Present<br>
+      Multi-agent autonomous systems and safety.
+    </div>
+  </li>
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Undergraduate Researcher</strong><br>
+      Safe Autonomous Systems Laboratory, 2024–2025<br>
+      Safety, Optimal Control, Estimation.
+    </div>
+  </li>
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Marine Physical Laboratory Intern</strong><br>
+      Scripps Institution of Oceanography, 2023–2025<br>
+      Marine robotics and sensor development.
+    </div>
+  </li>
+</ul>
+
+<h2> Awards and Honors </h2>
+<ul class="cv-list awards">
+  <li class="cv-item awards">
+    <div class="cv-details awards">
+      NSF Graduate Research Fellowship, 2025
+    </div>
+  </li>
+  <li class="cv-item awards ">
+    <div class="cv-details awards">
+      RSS Pathways Fellowship, 2025
+    </div>
+  </li>
+</ul>
+</section>
+
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Posts" }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -47,3 +98,112 @@ layout: archive
 </div>
 
 {% include paginator.html %}
+
+  </div>
+  <div class="media-column">
+    <div class="media-item-container">
+      <a href="/state-selection/" title="Robust State Estimation" class="media-link">
+      <img src="/assets/images/SSA.gif" class="media-item" alt="SSA">
+    </div>
+    <div class="media-item-container">
+      <a href="/dual-control/" title="Dual Control" class="media-link">
+      <img src="/assets/images/histograms.png" class="media-item" alt="Histograms">
+    </div>
+    <div class="media-item-container">
+      <a href="/mars-rover/" title="UCSD Mars Rover" class="media-link">
+      <img src="/assets/images/rover1.JPG" class="media-item" alt="Rover">
+    </div>
+  </div>
+</div>
+  <!-- <p>Welcome! I am Marfred Barrera, a PhD student at <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> 
+    studying under <a href="https://negarmehr.com/" target="_blank">Negar Mehr</a> 
+    and the <a href="https://iconlab.negarmehr.com/" target="_blank">ICON lab</a>. 
+  </p>
+
+  <p>Before this, I completed my undergraduate studies at <a href="https://ucsd.edu/" target="_blank">UC San Diego</a>,
+    obtaining a BSc in Mechanical Engineering with a specialization in robotics and control. 
+    My first research experience was as an intern as part of the <a href="https://scripps.ucsd.edu/mpl" target="_blank">Marine Physical Laboratory</a> at the
+    <a href="https://sio.ucsd.edu/" target="_blank">Scripps Institution of Oceanography</a>. There, I worked with Drew Lucas to develop a new
+    generation of self-sufficient autonomous oceanographic instrument platforms.
+    Later, I joined the <a href="https://sylviaherbert.com/" target="_blank">Safe Autonomous Systems Laboratory</a> 
+    where I worked with Sylvia Herbert on safety in the face of uncertainty in state estimation. 
+    I also worked on a joint project with Argonne National Laboratory regarding dual control and estimation for battery systems.
+
+<section class="cv-section">
+<h2> Education </h2>
+<ul class="cv-list education">
+  <li class="cv-item education">
+    <img src="/assets/images/berkeley-logo.png" alt="UC Berkeley" class="cv-logo">
+    <div class="cv-details education">
+      <strong>PhD, Mechanical Engineering</strong><br>
+      University of California, Berkeley, 2025–Present<br>
+      Advisor: Negar Mehr
+    </div>
+  </li>
+  <li class="cv-item education">
+    <img src="/assets/images/ucsd-logo.png" alt="UCSD" class="cv-logo">
+    <div class="cv-details education">
+      <strong>BSc, Mechanical Engineering</strong><br>
+      UC San Diego, 2021–2025<br>
+      Advisors: Sylvia Herbert, Drew Lucas<br>
+    </div>
+  </li>
+</ul>
+
+<h2> Research Experience </h2>
+<ul class="cv-list research">
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Graduate Researcher</strong><br>
+      ICON Laboratory, UC Berkeley, 2025–Present<br>
+      Multi-agent autonomous systems and safety.
+    </div>
+  </li>
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Undergraduate Researcher</strong><br>
+      Safe Autonomous Systems Laboratory, 2024–2025<br>
+      Safety, Optimal Control, Estimation.
+    </div>
+  </li>
+  <li class="cv-item research">
+    <div class="cv-details research">
+      <strong>Marine Physical Laboratory Intern</strong><br>
+      Scripps Institution of Oceanography, 2023–2025<br>
+      Marine robotics and sensor development.
+    </div>
+  </li>
+</ul>
+
+<h2> Awards and Honors </h2>
+<ul class="cv-list awards">
+  <li class="cv-item awards">
+    <div class="cv-details awards">
+      NSF Graduate Research Fellowship, 2025
+    </div>
+  </li>
+  <li class="cv-item awards ">
+    <div class="cv-details awards">
+      RSS Pathways Fellowship, 2025
+    </div>
+  </li>
+</ul>
+</section> -->
+
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %}
+
+</div> -->

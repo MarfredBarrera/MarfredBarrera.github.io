@@ -1,0 +1,141 @@
+.main-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Make main content area white */
+.initial-content {
+  background: #fff;
+  flex: 1;
+}
+
+.home-intro a,
+.entries-list a,
+.entries-grid a,
+.archive__subtitle a {
+  color: #0074D9 !important; /* or any blue shade you prefer */
+  text-decoration: underline !important; /* optional for emphasis */
+}
+
+.cv-section{
+    font-size: 0.85em;
+    margin-bottom: 4em;
+}
+
+.cv-section h2 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.media-column {
+  position: fixed;
+  top: 120px;
+  width: 320px;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  z-index: 100;
+}
+.media-item {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+.cv-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 1em;
+}
+.cv-details.education {
+  flex: 1;
+  border-left: 3px solid #0074D9;
+  padding-left: 1em;
+}
+
+/* Research experience section styles */
+.cv-list.research {
+  list-style: disc;
+  padding-left: 2em;
+}
+.cv-item.research {
+  margin-bottom: 1.5em;
+  display: list-item;
+  align-items: initial;
+}
+.cv-details.research {
+  border: none;
+  padding-left: 0;
+}
+
+
+/* Media Sidebar */
+.media-column {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  width: 320px;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: center;
+  z-index: 100;
+  height: auto;
+  z-index: 100;
+}
+.media-item {
+  width: 90%;
+  max-width: 350px;
+}
+.media-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.media-link {
+  position: relative;
+  display: inline-block;
+}
+.media-popup {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #14183b !important;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.95em;
+  z-index: 200;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.media-link:hover .media-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .media-column {
+    position: static;
+    width: 100%;
+    margin: 2em 0;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .media-item {
+    width: 100px;
+  }
+}
