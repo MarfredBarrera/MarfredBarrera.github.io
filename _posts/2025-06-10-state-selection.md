@@ -1,6 +1,7 @@
 ---
 title: "Sampling-Based Robust State Estimation for Deterministic Safety Controllers"
-excerpt_separator: "<!--more-->"
+thumbnail: /assets/images/SSA.png
+
 # categories:
 #   - Blog
 # tags:

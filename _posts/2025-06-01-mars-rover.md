@@ -1,6 +1,7 @@
 ---
 title: "UCSD Mars Rover Team"
 excerpt_separator: "<!--more-->"
+thumbnail: /assets/images/rover1.JPG
 # categories:
 #   - Blog
 # tags:

@@ -17,6 +17,7 @@
   text-decoration: underline !important; /* optional for emphasis */
 }
 
+/* CV Section */
 .cv-section{
     font-size: 0.85em;
     margin-bottom: 4em;
@@ -27,7 +28,7 @@
   margin-bottom: 1em;
 }
 
-.media-column {
+/* .media-column {
   position: fixed;
   top: 120px;
   width: 320px;
@@ -47,7 +48,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 1.5em;
   padding-left: 1em;
-}
+} */
 
 .cv-logo {
   width: 100px;
@@ -139,4 +140,31 @@
   .media-item {
     width: 100px;
   }
+}
+
+
+/* Post Thumbnail */
+.post-thumbnail {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+.post-flex-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.post-thumbnail-wrapper {
+  flex: 0 0 auto;
+}
+.post-content-wrapper {
+  flex: 1 1 0;
+}
+.post-thumbnail {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1em;
 }
